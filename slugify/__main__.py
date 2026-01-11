@@ -82,8 +82,7 @@ def slugify_params(args: argparse.Namespace) -> dict[str, Any]:
     )
 
 
-def main(argv: list[str] | None = None):  # pragma: no cover
-    """ Run this program """
+def main(argv: list[str] | None = None):
     if argv is None:
         argv = sys.argv
     args = parse_args(argv)
@@ -94,5 +93,5 @@ def main(argv: list[str] | None = None):  # pragma: no cover
         sys.exit(-1)
 
 
-if __name__ == '__main__':  # pragma: no cover
+if __name__ == '__main__':
     main()

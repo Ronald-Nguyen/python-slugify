@@ -12,36 +12,33 @@ def add_uppercase_char(char_list: list[tuple[str, str]]) -> list[tuple[str, str]
     return char_list
 
 
-# Language specific pre translations
-# Source awesome-slugify
 
-_CYRILLIC = [      # package defaults:
-    (u'ё', u'e'),    # io / yo
-    (u'я', u'ya'),   # ia
-    (u'х', u'h'),    # kh
-    (u'у', u'y'),    # u
-    (u'щ', u'sch'),  # sch
-    (u'ю', u'u'),    # iu / yu
+_CYRILLIC = [
+    (u'ё', u'e'),
+    (u'я', u'ya'),
+    (u'х', u'h'),
+    (u'у', u'y'),
+    (u'щ', u'sch'),
+    (u'ю', u'u'),
 ]
 CYRILLIC = add_uppercase_char(_CYRILLIC)
 
-_GERMAN = [        # package defaults:
-    (u'ä', u'ae'),   # a
-    (u'ö', u'oe'),   # o
-    (u'ü', u'ue'),   # u
+_GERMAN = [
+    (u'ä', u'ae'),
+    (u'ö', u'oe'),
+    (u'ü', u'ue'),
 ]
 GERMAN = add_uppercase_char(_GERMAN)
 
-_GREEK = [         # package defaults:
-    (u'χ', u'ch'),   # kh
-    (u'Ξ', u'X'),    # Ks
-    (u'ϒ', u'Y'),    # U
-    (u'υ', u'y'),    # u
+_GREEK = [
+    (u'χ', u'ch'),
+    (u'Ξ', u'X'),
+    (u'ϒ', u'Y'),
+    (u'υ', u'y'),
     (u'ύ', u'y'),
     (u'ϋ', u'y'),
     (u'ΰ', u'y'),
 ]
 GREEK = add_uppercase_char(_GREEK)
 
-# Pre translations
 PRE_TRANSLATIONS = CYRILLIC + GERMAN + GREEK
